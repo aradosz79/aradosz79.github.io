@@ -22,8 +22,10 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
     <!-- Theme CSS - Includes Bootstrap -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/creative.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owl.theme.default.min.css">
 </head>
 
 <body id="page-top">
@@ -39,6 +41,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#news">News</a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#cicd">CI/CD Process</a>
                 </li>
@@ -78,6 +84,57 @@
     </div>
 </header>
 
+
+<section class="page-section" id="news">
+    <div class="container">
+        <div class="row">
+            <h3 class="h3">News</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="news-slider" class="owl-carousel">
+
+                    <div class="post-slide">
+                        <div class="post-img">
+                            <a href="https://github.com/aradosz79/spring-utils">
+                                <img src="./img/cat/spring.jpg" alt="">
+                                <div class="post-date">
+                                    <span class="date">04</span>
+                                    <span class="month">sep</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="post-review">
+                            <h3 class="post-title"><a href="https://github.com/aradosz79/spring-utils">New Release</a></h3>
+                            <ul class="post-bar">
+                                <li><i class="fa fa-cat"></i><a href="https://github.com/aradosz79/spring-utils">spring-utils</a></li>
+                            </ul>
+                            <p class="post-description">The first release 0.0.1 has been published including docker health status endpoint.</p>
+                        </div>
+                    </div>
+                   <div class="post-slide">
+                        <div class="post-img">
+                            <a href="/">
+                                <img src="./img/cat/personal.jpg" alt="">
+                                <div class="post-date">
+                                    <span class="date">04</span>
+                                    <span class="month">sep</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="post-review">
+                            <h3 class="post-title"><a href="/">Home Page Launched</a></h3>
+                            <ul class="post-bar">
+                                <li><i class="fa fa-cat"></i><a href="/">Personal</a></li>
+                            </ul>
+                            <p class="post-description">The new GitHub personal page has been launched.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- About Section -->
 <section class="page-section bg-primary" id="cicd">
     <div class="container">
@@ -221,6 +278,19 @@
 <!-- Custom scripts for this template -->
 <script src="js/creative.min.js"></script>
 
+<script src="owl.carousel.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("#news-slider").owlCarousel({
+            items: 2,
+            itemsDesktop: [1199, 2],
+            itemsMobile: [600, 1],
+            pagination: true,
+            autoPlay: true
+        });
+    });
+</script>
 </body>
 
 </html>
